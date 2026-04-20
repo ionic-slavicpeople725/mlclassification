@@ -1,0 +1,16 @@
+[project]
+name = "ml-algo-demo"
+version = "0.1.0"
+description = "Interactive ML Classification Algorithm Comparison Tool"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.4",
+    "pandas>=3.0.2",
+    "plotly>=6.7.0",
+    "scikit-learn>=1.8.0",
+    "seaborn>=0.13.2",
+    "streamlit>=1.56.0",
+    "xgboost>=3.2.0",
+]
