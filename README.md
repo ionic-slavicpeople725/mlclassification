@@ -11,7 +11,7 @@
 
 **Compare popular ML classification algorithms side-by-side with interactive visualizations and real-time hyperparameter tuning.**
 
-[Report Bug](https://github.com/alfredang/mlclassification/issues) · [Request Feature](https://github.com/alfredang/mlclassification/issues)
+[Live Demo](https://ml-classification-888.streamlit.app/) · [Report Bug](https://github.com/alfredang/mlclassification/issues) · [Request Feature](https://github.com/alfredang/mlclassification/issues)
 
 </div>
 
