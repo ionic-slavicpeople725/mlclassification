@@ -137,7 +137,7 @@ Contributions are welcome!
 
 ## Developed By
 
-**[Tertiary Infotech Academy Pte Ltd](https://www.tertiaryinfotech.com)**
+**[Tertiary Infotech Academy Pte Ltd](https://www.tertiarycourses.com.sg/)**
 
 ## Acknowledgements
 

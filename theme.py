@@ -720,7 +720,7 @@ def render_footer() -> None:
     """Render the powered-by footer."""
     st.markdown("""
 <div class="app-footer">
-    Powered by <a href="https://www.tertiaryinfotech.com" target="_blank" rel="noopener noreferrer">Tertiary Infotech Academy Pte Ltd</a>
+    Powered by <a href="https://www.tertiarycourses.com.sg/" target="_blank" rel="noopener noreferrer">Tertiary Infotech Academy Pte Ltd</a>
 </div>
 """, unsafe_allow_html=True)
 
